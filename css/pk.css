@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Shantell+Sans:wght@300&family=Signika&family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Signika', sans-serif;
+}
+
+body{
+    background-color:#d4e1e3; 
+}
+
+
+header{
+    width: 100%;
+    background-color:#d4e1e3;;
+    height: 19vh;
+    border-bottom: 3px white;
+}
+
+
+nav{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 200px auto auto;
+}
+
+nav img{
+    margin: 20px;
+}
+
+nav .tt{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+nav ul a:hover{
+    color: black;
+}
+
+.centre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input{
+    padding: 4px;
+    width: 30vw;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search button{
+    padding: 4px;
+    border-radius: 5px;
+    
+}
+
+.search button:hover{
+    background-color:#b1b8db;
+}
+
+
+.container {
+    display: grid;
+    background-color: aqua;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.item {
+    background-color: #549fab;
+    padding: 25px;
+    font-size: 30px;
+}
+
+.item a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover{
+    background-color: rebeccapurple;
+}
+
+
+.cont1{
+    display: flex;
+    flex-direction: column;
+    margin: 60px 280px;
+}
+
+.c3{
+    display: flex;
+    flex-direction: column;
+}
+
+.book a{
+    display: inline-flex;
+    margin: 0px 60px;
+    padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: grey;
+}
+
+.book a:hover{
+    background-color: black;
+}
+
+.book a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.card1{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background-color: #b1b8db;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card1 .info{
+    width: 331px;
+    padding: 20px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info img{
+    position: relative;
+    left: -133px;
+    top: -5px;
+}
