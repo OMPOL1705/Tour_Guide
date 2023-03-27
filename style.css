@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Tilt Neon', cursive;
 }
 
 header {
@@ -42,7 +43,7 @@ nav ul{
 }
 
 .log{
-    margin-left: 650px;
+    margin-left: 550px;
 }
 
 .log button{
@@ -114,39 +115,62 @@ nav ul{
     justify-content: center;
 }
 
-.cade{
-    margin: 30px 40px 20px 100px;
-    width: 160vh;
-    height: 250vh;
-    
+.contain{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
 }
 
-.cade .c4{
-    display: inline-block;
-    padding-top: 30px;
-    width: 450px;
-    height: 350px;
-    border-radius: 15px;
+.cd .cd1{
+    width: 650px;
+    height: 300px;
 }
 
-.c6{
-    font-size: 17px;
-    left: 56px;
-    display: inline-block;
-    position: relative;
-    top: -140px;
-    font-family: 'Lato', sans-serif;
+.cd .cd2 .cd23{
+    margin: 25px 0px;
 }
 
-.c6 .button{
-    justify-content: center;
-    padding-right: 0px;  
-    margin-left: 2px;
+.cd .cd2 .cd23 a{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 6px;
+    border-radius: 5px;
+    color:white;
+    background-color: #546bab;
+} 
+
+.cd .cd2 .cd23 a:hover{
+    background-color: gray;
 }
 
-.c6 .button a{
-    color:gray;
+.cd{
+    padding: 30px 200px;
 }
+
+.cd .cd1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+.cd2{
+    padding: 60px;
+}
+
+.cd{
+    display: flex;
+    flex-direction: row;
+}
+
+.container h1{
+    font-family: 'Tilt Neon', cursive;
+    padding: 25px 50px;
+}
+
+.container p{
+     margin-bottom: 25px;
+}
+
 
 footer{
     height: 12vh;
