@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Travel</title>
 </head>
 
@@ -14,7 +14,7 @@
     <header>
         <nav>
             <div class="imt">
-                <img src="images/logo.svg" alt="" width="150px" height="150px">
+                <img src="images/logo.png" alt="" width="150px" height="150px">
             </div>
 
             <ul>
@@ -39,7 +39,7 @@
         <div class="cont">
             <div class="c2">
                 <div class="card">
-                    <img src="https://source.unsplash.com/200x200/?maldives" alt="">
+                    <img src="https://source.unsplash.com/200x180/?maldives" alt="">
                 </div>
                 <div class="lines">
                     <p>MALDIVES</p>
@@ -53,7 +53,7 @@
 
             <div class="c2">
                 <div class="card">
-                    <img src="https://source.unsplash.com/200x200/?switzerland" alt="">
+                    <img src="https://source.unsplash.com/200x180/?switzerland" alt="">
                 </div>
                 <div class="lines">
                     <p>SWITZERLAND</p>
@@ -67,7 +67,7 @@
 
             <div class="c2">
                 <div class="card">
-                    <img src="https://source.unsplash.com/200x200/?mumbai" alt="">
+                    <img src="https://source.unsplash.com/200x180/?mumbai" alt="">
                 </div>
                 <div class="lines">
                     <p>MUMBAI</p>
@@ -81,7 +81,7 @@
 
             <div class="c2">
                 <div class="card">
-                    <img src="https://source.unsplash.com/200x200/?dubai" alt="">
+                    <img src="https://source.unsplash.com/200x180/?dubai" alt="">
                 </div>
                 <div class="lines">
                     <p>DUBAI</p>

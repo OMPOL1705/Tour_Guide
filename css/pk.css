@@ -8,26 +8,29 @@
 }
 
 body{
-    background-color:#d4e1e3; 
+    background-color:#d4e1e3;
 }
 
 
 header{
     width: 100%;
-    background-color:#d4e1e3;;
+    background-color:#d4e1e3;
     height: 19vh;
     border-bottom: 3px white;
 }
 
+.search{
+    margin-left: 350px;
+}
+
 
 nav{
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 200px auto auto;
+    display: flex;
+    align-items: center;
 }
 
 nav img{
-    margin: 20px;
+    margin: 0px 20px;
 }
 
 nav .tt{

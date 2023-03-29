@@ -22,7 +22,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 <body>
 <header>
         <nav>
-        <img src="../images/logo.svg" alt="" width="150px" height="100px">
+        <img src="../images/logo.png" alt="" width="150px" height="150px">
             <div class="tt">
                 <ul>
                     <a href="/final/home.php">Home</a>
