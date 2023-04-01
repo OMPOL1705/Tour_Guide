@@ -50,7 +50,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         <?php
 
         include 'partials/_dbconnect.php';
-        $sql="SELECT * FROM `familytours`";
+        $sql="SELECT * FROM `adventuretours`";
         $result=mysqli_query($conn,$sql);
 
        

@@ -1,8 +1,7 @@
-<?php 
-if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-  $loggedin= true;
-}
-else{
+<?php
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  $loggedin = true;
+} else {
   $loggedin = false;
 }
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,22 +16,24 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="nav-link" href="/final/home.php">Home</a>
       </li>';
 
-      if(!$loggedin){
-      echo '<li class="nav-item mx-3">
+if (!$loggedin) {
+  echo '<li class="nav-item mx-3">
         <a class="nav-link" href="/final/loginsystem/login.php">Login</a>
       </li>
       <li class="nav-item mx-3">
         <a class="nav-link" href="/final/loginsystem/signup.php">Signup</a>
       </li>';
-      }
-      if($loggedin){
-      echo '<li class="nav-item mx-3">
+}
+if ($loggedin) {
+  echo '<li class="nav-item mx-3">
         <a class="nav-link" href="/final/loginsystem/logout.php">Logout</a>
       </li>';
-    }
-       
-      
-    echo '</ul>
+}
+echo '<li class="nav-item mx-3">
+    <a class="nav-link" href="/final/admin/admin.php">Admin</a>
+  </li>';
+
+echo '</ul>
    
   </div>
 </nav>';
