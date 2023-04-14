@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pk.css">
+    <link rel="stylesheet" href="pk.css">
     <title>Package</title>
 </head>
 
@@ -56,6 +56,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
        
 
         while($row=mysqli_fetch_assoc($result)){
+            $p_name=$row['p_name'];
             $desc=$row['desc'];
             $location=$row['location'];
             $price=$row['price'];
@@ -68,6 +69,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             </div>
             <div class="c3">
                 <div class="info centre">
+                <div class="Pack_name" style="display:flex; justify-content: center; margin: 8px">  
+                <h1>'.$p_name.'</h1>
+                </div>
                     <p>Description: '.$desc.'?
                         <br>
                         Location: '.$location.' <br>

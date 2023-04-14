@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pk.css">
+    <link rel="stylesheet" href="pk.css">
     <title>Package</title>
 </head>
 
@@ -50,28 +50,33 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         <?php
 
         include 'partials/_dbconnect.php';
-        $sql="SELECT * FROM `familytours`";
-        $result=mysqli_query($conn,$sql);
+        $sql = "SELECT * FROM `familytours`";
+        $result = mysqli_query($conn, $sql);
 
-       
 
-        while($row=mysqli_fetch_assoc($result)){
-            $desc=$row['desc'];
-            $location=$row['location'];
-            $price=$row['price'];
-            $img=$row['img'];
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            $p_name = $row['p_name'];
+            $desc = $row['desc'];
+            $location = $row['location'];
+            $price = $row['price'];
+            $img = $row['img'];
 
             echo '<div class="card1">
             <div class="img1">
-                <img src="data:image;base64,'.base64_encode($row['img']).'" alt="" srcset="" width="300px"
+                <img src="data:image;base64,' . base64_encode($row['img']) . '" alt="" srcset="" width="300px"
                     height="250px" border-radius="10px">
             </div>
             <div class="c3">
+                
                 <div class="info centre">
-                    <p>Description: '.$desc.'?
+                <div class="Pack_name" style="display:flex; justify-content: center; margin: 8px">  
+                <h1>' . $p_name . '</h1>
+                </div>
+                    <p>Description: ' . $desc . '?
                         <br>
-                        Location: '.$location.' <br>
-                        Price: '.$price.' <br>
+                        Location: ' . $location . ' <br>
+                        Price: ' . $price . ' <br>
                     </p>
                 </div>
                 <div class="book centre">
@@ -83,7 +88,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         }
 
         ?>
-        
+
     </div>
 
 </body>

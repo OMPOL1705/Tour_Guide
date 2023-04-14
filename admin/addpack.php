@@ -1,27 +1,33 @@
 <?php
 $check = false;
+$check2 = false;
 if (isset($_POST['cat'])) {
 
 
     include '../loginsystem/partials/_dbconnect.php';
     $cat = $_POST['cat'];
+    $p_name = $_POST["p_name"];
     $desc = $_POST["desc"];
     $location = $_POST["location"];
     $price = $_POST["price"];
     $img = addslashes(file_get_contents($_FILES["img"]["tmp_name"]));
 
 
-    if ($cat && $desc && $location && $price && $img) {
+    if ($p_name && $cat && $desc && $location && $price && $img) {
         $cat = str_replace(' ', '', $cat);
         $cat = strtolower($cat);
 
-        $sql = "INSERT INTO `$cat` (`desc`, `location`, `price`, `dt`, `img`) VALUES ('$desc', '$location', '$price', current_timestamp(), '$img');";
+        $sql = "INSERT INTO `$cat` (`p_name`, `desc`, `location`, `price`, `dt`, `img`) VALUES ('$p_name', '$desc', '$location', '$price', current_timestamp(), '$img');";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
             $check = true;
         } 
     }
+    else{
+        $check2 = true;
+    }
+    
 
 }
 
@@ -84,6 +90,7 @@ if (isset($_POST['cat'])) {
         </div>
     </nav>
     <?php
+    
     if ($check) {
         echo ' <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Hey!</strong> Package added to respective category successfully.
@@ -91,7 +98,16 @@ if (isset($_POST['cat'])) {
           <span aria-hidden="true">&times;</span>
         </button>
       </div> ';
-    } ?>
+    }
+    if ($check2){
+        echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Hey!</strong> Package not added as all details should be entered.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> ';
+    }
+     ?>
 
 
     <div class="container my-4 d-flex justify-content-center flex-column">
@@ -107,6 +123,10 @@ if (isset($_POST['cat'])) {
                     <option>Special Event Tours</option>
                     <option>Group Tours</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Package Name</label>
+                <input type="text" class="form-control" name="p_name" id="p_name">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description</label>
