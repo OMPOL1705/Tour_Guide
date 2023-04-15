@@ -25,6 +25,9 @@ if (isset($_POST['username'])) {
                 if ($result) {
                     $showAlert = true;
                 }
+                session_start();
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
                 header("location: package.php");
             } else {
                 $showError = "Passwords do not match";

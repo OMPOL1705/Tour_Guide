@@ -59,7 +59,7 @@ nav ul a:hover{
     padding: 4px;
     width: 30vw;
     border-radius: 5px;
-    margin-right: 5px;
+    margin-right: -36px;
 }
 
 .search button{
@@ -127,7 +127,7 @@ nav ul a:hover{
     flex-direction: column;
 }
 
-.book a{
+button{
     display: inline-flex;
     margin: 0px 60px;
     padding: 3px 5px;
@@ -136,14 +136,14 @@ nav ul a:hover{
     background-color: grey;
 }
 
-.book a:hover{
+button:hover{
     background-color: black;
 }
 
-.book a{
+button{
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .card1{

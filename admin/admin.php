@@ -60,7 +60,7 @@ if(isset($_POST['a_name'])){
     ?>
 
     <div class="container my-5 mx-auto" style="width: 500px;">
-     <h1 class="text-center pb-6">Login to our website</h1>
+     <h1 class="text-center pb-6">Login to Admin Panel</h1>
      <form action="../admin/admin.php" method="post">
         <div class="form-group">
             <label for="username">Admin name</label>

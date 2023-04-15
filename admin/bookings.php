@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Panel</title>
-    
+
 </head>
 
 <body>
@@ -59,74 +59,83 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         </div>
     </nav>
 
+
+
     <table class="table table-hover table-dark mx-auto my-5" style="width: 1100px;">
-  <thead>
-    <tr>
-      <th scope="col">Pid</th>
-      <th scope="col">Package Name</th>
-      <th scope="col">Name</th>
-      <th scope="col">Age</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Address</th>
-      <th scope="col">Start Date</th>
-      <th scope="col">End Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Category</th>
+                <th scope="col">Pacakge</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Booking Date</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+        <?php
+       
+        include '../loginsystem/partials/_dbconnect.php';
+        $sql = "SELECT * FROM `book`";
+        $result = mysqli_query($conn, $sql);
 
-    
+        while ($row = mysqli_fetch_assoc($result)) {
+            
+            $sno = $row['sno'];
+            $username = $row['username'];
+            $category = $row['category'];
+            $p_name = $row['p_name'];
+            $name = $row['name'];
+            $age = $row['age'];
+            $gender = $row['gender'];
+            $email = $row['email'];
+            $phone = $row['phone'];
+            $other = $row['other'];
+            $dt = $row['dt'];
+            $st_date = $row['st_date'];
+            $en_date = $row['en_date'];
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        echo '<tr>
+      <th scope="row" class="text-dark">'.$username.'</th>
+      <td class="text-dark">'.$category.'</td>
+      <td class="text-dark">'.$p_name.'</td>
+      <td class="text-dark">'.$name.'</td>
+      <td class="text-dark">'.$age.'</td>
+      <td class="text-dark">'.$gender.'</td>
+      <td class="text-dark">'.$email.'</td>
+      <td class="text-dark">'.$phone.'</td>
+      <td class="text-dark">'.$other.'</td>
+      <td class="text-dark">'.$st_date.'</td>
+      <td class="text-dark">'.$en_date.'</td>
+      <td class="text-dark">'.$dt.'</td>
+        </tr>';
+        }
+        
+        
+
+        ?>
+         </tbody>
+         </table>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

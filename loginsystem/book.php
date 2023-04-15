@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $insert = false;
 $showError = false;
 $inset = true;
@@ -25,7 +28,7 @@ if (isset($_POST['name'])) {
     $en_date = $_POST['en_date'];
 
     if ($name && $gender && $age && $email && $phone && $desc && $st_date && $en_date) {
-        $sql = "INSERT INTO `user`.`book` (`name`, `age`, `gender`, `email`, `phone`, `other`, `st_date`, `en_date`, `dt`) VALUES ('$name', '$age', '$gender', '$email', '$phone', '$desc', '$st_date', '$en_date', current_timestamp());";
+        $sql = "INSERT INTO `user`.`book` (`category`, `p_name`, `username`, `name`, `age`, `gender`, `email`, `phone`, `other`, `st_date`, `en_date`, `dt`) VALUES ('$_SESSION[category]', '$_SESSION[p_name]', '$_SESSION[username]', '$name', '$age', '$gender', '$email', '$phone', '$desc', '$st_date', '$en_date', current_timestamp());";
 
         if ($con->query($sql) == true) {
 

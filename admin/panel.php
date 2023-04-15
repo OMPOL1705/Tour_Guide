@@ -56,7 +56,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/final/admin/addpack.php">Add package</a>
-                        <a class="dropdown-item" href="#">View bookings</a>
+                        <a class="dropdown-item" href="/final/admin/bookings.php">View bookings</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>

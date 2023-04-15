@@ -6,6 +6,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     exit;
 }
 
+if (isset($_POST['p_name'])){
+    $table_name = $_POST["table_name"];
+    $_SESSION['category'] = $table_name;
+    $p_name = $_POST["p_name"];
+    $_SESSION['p_name'] = $p_name;
+
+    header("location: book.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +88,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     </p>
                 </div>
                 <div class="book centre">
-                    <a href="/final/loginsystem/book.php">BOOK NOW</a>
+                <form action="/final/loginsystem/package.php" method="post">
+                <input type="hidden" name="table_name" value="Religious tours">
+                <input type="hidden" name="p_name" value="' . $p_name . '">
+                <button type="submit" class="btn btn-primary" style="padding: 8px 20px;background-color: #a5a1a1;border-radius: 6px;font-size: 20px; color:white; cursor:pointer;">Book Now</button>
+                    </form>
                 </div>
             </div>
         </div>';
