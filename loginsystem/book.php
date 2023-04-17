@@ -33,6 +33,7 @@ if (isset($_POST['name'])) {
         if ($con->query($sql) == true) {
 
             $insert = true;
+            $_SESSION['booked'] = true;
         } else {
             echo "ERROR: $sql <br> $con->error";
         }
