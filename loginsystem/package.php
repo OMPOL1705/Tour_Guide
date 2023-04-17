@@ -30,6 +30,7 @@ if (isset($_POST['p_name'])){
 </head>
 
 <body>
+    
     <header>
         <nav>
             <img src="../images/logo.png" alt="" width="150px" height="150px">
@@ -73,7 +74,7 @@ if (isset($_POST['p_name'])){
             $price = $row['price'];
             $img = $row['img'];
 
-            echo '<div class="card1">
+            echo '<div class="card1" style="margin: 47px;">
             <div class="img1">
                 <img src="data:image;base64,' . base64_encode($row['img']) . '" alt="" srcset="" width="300px"
                     height="250px" border-radius="10px">

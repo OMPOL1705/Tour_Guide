@@ -149,9 +149,8 @@ button{
 .card1{
     display: flex;
     justify-content: center;
-    margin: 35px;
+    margin: 45px;
     background-color: #b1b8db;
-    
     border-radius: 12px;
 }
 

@@ -37,6 +37,7 @@ if (isset($_POST['name'])) {
         } else {
             echo "ERROR: $sql <br> $con->error";
         }
+        header("location: package.php");
     } else {
         $showError = "Please!! Enter all details present in the form.";
     }
@@ -106,7 +107,7 @@ if (isset($_POST['name'])) {
                 onfocus="(this.type='date')" onblur="(this.type='text')" id="st_date" />
             <input placeholder="Enter end date" name="en_date" class="textbox-n" type="text"
                 onfocus="(this.type='date')" onblur="(this.type='text')" id="en_date" />
-            <button class="btn">Submit</button>
+            <button class="btn" data-toggle="modal" data-target="#bookModal">Submit</button>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
