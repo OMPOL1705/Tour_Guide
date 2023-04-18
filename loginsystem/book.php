@@ -37,7 +37,7 @@ if (isset($_POST['name'])) {
         } else {
             echo "ERROR: $sql <br> $con->error";
         }
-        header("location: package.php");
+        
     } else {
         $showError = "Please!! Enter all details present in the form.";
     }

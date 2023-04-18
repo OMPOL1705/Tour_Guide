@@ -35,13 +35,13 @@ if (isset($_POST['p_name'])){
             <div class="tt">
                 <ul>
                     <a href="/final/home.php">Home</a>
+                    <a href="/final/loginsystem/review.php">Review</a>
                     <a href="/final/loginsystem/logout.php">Log Out</a>
 
                 </ul>
             </div>
-            <div class="search centre">
-                <input type="text" placeholder="Anything">
-                <button>Search</button>
+            <div class="search centre" style="margin-left: 520px; border:2px solid white; padding:8px; border-radius:10px; color:white; background-color:blue;">
+                <h1>Welcome!!! <?php echo $_SESSION['username']?></h1>
             </div>
         </nav>
     </header>
